@@ -9,11 +9,11 @@
     <th>arrival_city</th>
   </tr>
 
-<% @f.each do |f| %>
+<% @flights.each do |f| %>
   <tr>
-    <td><%= f.date %></td>
-    <td><%= f.departure_city %></td>
-    <td><%= f.arrival_city %></td>
+    <td><%= flights.date %></td>
+    <td><%= flights.departure_city %></td>
+    <td><%= flights.arrival_city %></td>
     <td><%= link_to "Purchase", purchase_path %></td>
   </tr>
 <% end %>
