@@ -1,14 +1,11 @@
 class FlightsController < ApplicationController
-  def index
-  	@f = Flight.all
-  end
 
   def new
   	@flight = Flight.new
-  end	
+  end
 
   def create
-  	flight = Flight.new(name: params[:flight][:name], departure: params[:flight][:departure], arrival: params[:flight][:arrival])
+  	flight = Flight.new(name: params[:flight][:name], departure: params[:flight][:departure], arrival: params[:flight][:arrival], departure_time: params[:flight][:departure_time], tickets: params[:flight][:ticekts])
   	flight.save!
 
   	redirect_to "/"
