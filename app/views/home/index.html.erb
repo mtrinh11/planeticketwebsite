@@ -1,0 +1,25 @@
+<h3>Welcome to CheapFlights.com</h3>
+
+<h1>Here are our available flights</h1>
+
+<table>
+  <tr>
+    <th>Departure City </th>
+    <th>Arrival City</th>
+    <th>Departure Date  </th>
+    <th>Departure Time  </th>
+
+  </tr>
+
+<% @flights.each do |f| %>
+  <tr>
+    <td><%= f.departure %></td>
+    <td><%= f.arrival %></td>
+    <td><%= f.departure_date %></td>
+    <td><%= f.departure_time %></td>
+ 
+  </tr>
+<% end %>
+</table>
+
+<br>
